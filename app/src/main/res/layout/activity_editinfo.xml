@@ -28,6 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:enabled="false"
                 android:inputType="textPersonName" />
         </TableRow>
 
@@ -46,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:enabled="true"
                 android:inputType="textPersonName" />
         </TableRow>
 
@@ -94,7 +96,7 @@
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="비밀번호" />
+                android:text="비밀번호 재확인" />
 
             <EditText
                 android:id="@+id/edit_pw2_test"
@@ -105,5 +107,11 @@
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/edit_confirm_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="수정" />
 
 </LinearLayout>
