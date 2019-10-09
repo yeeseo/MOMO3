@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/mypost"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:text="내가 쓴 게시물" />
+
+    <Button
+        android:id="@+id/edit_myinfo"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:text="회원정보 수정" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="대여" />
+</LinearLayout>

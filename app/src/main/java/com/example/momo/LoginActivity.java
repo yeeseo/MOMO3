@@ -55,9 +55,13 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"로그인 성공!!",Toast.LENGTH_SHORT).show();
                                 String userID = jsonResponse.getString("userID");
                                 String userPassword = jsonResponse.getString("userPassword");
+                                String userName = jsonResponse.getString("userName");
+                                String userEmail = jsonResponse.getString("userEmail");
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 intent.putExtra("userID",userID);
                                 intent.putExtra("userPassword",userPassword);
+                                intent.putExtra("userName",userName);
+                                intent.putExtra("userEmail",userEmail);
                                 LoginActivity.this.startActivity(intent);
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
