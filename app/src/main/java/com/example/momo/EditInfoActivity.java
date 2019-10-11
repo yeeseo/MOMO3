@@ -49,6 +49,10 @@ public class EditInfoActivity extends AppCompatActivity  {
                     dialog.show();
                     return;
                 }
+                else if(userPassword.equals("") && userPassword2.equals(""))
+                {
+                    userPassword = getIntent().getStringExtra("userPassword");
+                }
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -66,13 +70,13 @@ public class EditInfoActivity extends AppCompatActivity  {
                 RequestQueue queue = Volley.newRequestQueue(EditInfoActivity.this);
                 queue.add(editInfoRequest);
                 Toast.makeText(getApplicationContext(),"수정 완료",Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(EditInfoActivity.this, MypageActivity.class);
-                intent.putExtra("userID",userID);
-                intent.putExtra("userPassword",userPassword);
-                intent.putExtra("userName",userName);
-                intent.putExtra("userEmail",userEmail);
-                EditInfoActivity.this.startActivity(intent);
+                finish();
+//                Intent intent = new Intent(EditInfoActivity.this, MypageActivity.class);
+//                intent.putExtra("userID",userID);
+//                intent.putExtra("userPassword",userPassword);
+//                intent.putExtra("userName",userName);
+//                intent.putExtra("userEmail",userEmail);
+//                EditInfoActivity.this.startActivity(intent);
             }
         });
     }
