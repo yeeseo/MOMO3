@@ -33,6 +33,7 @@
         <activity android:name="com.example.momo.LoginActivity" />
         <activity android:name="com.example.momo.MypageActivity" />
         <activity android:name="com.example.momo.EditInfoActivity" />
+        <activity android:name="com.example.momo.MypostActivity" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

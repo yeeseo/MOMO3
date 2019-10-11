@@ -698,6 +698,7 @@ id content
 id contentPanel
 id custom
 id customPanel
+id date
 id decor_content_parent
 id default_activity_button
 id dimensions
@@ -742,11 +743,14 @@ id left
 id line1
 id line3
 id listMode
+id listView_main_list
 id list_item
 id manage_Btn
 id message
 id middle
 id multiply
+id my_post_buy
+id my_post_sale
 id mypost
 id never
 id none
@@ -809,6 +813,9 @@ id textView4
 id textView5
 id textView6
 id textView7
+id textView_list_address
+id textView_list_id
+id textView_list_name
 id time
 id title
 id titleDividerNoCustom
@@ -858,6 +865,7 @@ layout activity_editinfo
 layout activity_login
 layout activity_main
 layout activity_mypage
+layout activity_mypost
 layout activity_register
 layout activity_start
 layout notification_action
@@ -866,6 +874,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout post_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

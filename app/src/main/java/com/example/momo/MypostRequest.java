@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MypostRequest extends StringRequest {
-    final static private String URL = "http://khsung0.dothome.co.kr/Mypost.php ";
+    final static private String URL = "http://khsung0.dothome.co.kr/GetMyPost.php ";
     private Map<String, String> parameters;
     public MypostRequest(String userID, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);

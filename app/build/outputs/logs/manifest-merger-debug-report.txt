@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\7ba58f15a5f3b56d5096951b3cdcf862\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\892b9e8162e69cf67dd122f44c6e6df3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\534a9ad384b30fd0c671ec26fd0ac893\AndroidManifest.xml:2:1-11:12
@@ -32,20 +32,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\yessir\.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\9d84ae85ee17ce187d23a74d612795ae\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\1c899c19b4f18e33419b784985d84182\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\5f5b431fd9243e6903df35345b1c72e1\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:1-30:12
 		INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:2:11-69
@@ -54,7 +54,7 @@ ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:5:5-6
 	android:name
 		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:7:5-27:19
+ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:7:5-28:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\892b9e8162e69cf67dd122f44c6e6df3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\892b9e8162e69cf67dd122f44c6e6df3\AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\yessir\.gradle\caches\transforms-2\files-2.1\534a9ad384b30fd0c671ec26fd0ac893\AndroidManifest.xml:9:5-20
@@ -113,6 +113,10 @@ activity#com.example.momo.EditInfoActivity
 ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:26:9-54
 	android:name
 		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:26:19-51
+activity#com.example.momo.MypostActivity
+ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:27:9-52
+	android:name
+		ADDED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml:27:19-49
 uses-sdk
 INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\yessir\workspace\MoMo\app\src\main\AndroidManifest.xml

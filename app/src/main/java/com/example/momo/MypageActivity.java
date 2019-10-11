@@ -27,39 +27,24 @@ public class MypageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mypage);
         //Intent intent = getIntent();
         final String userID = getIntent().getStringExtra("userID");
+        final String userPassword = getIntent().getStringExtra("userPassword");
+        final String userEmail = getIntent().getStringExtra("userEmail");
+        final String userName = getIntent().getStringExtra("userName");
+
         Button editInfo_Btn = findViewById(R.id.edit_myinfo);
         Button myPost_Btn = findViewById(R.id.mypost);
         myPost_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Response.Listener<String> responseListener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
-                            if(success){
-
-                            }else {
-
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-                MypostRequest mypostRequest = new MypostRequest(userID, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(MypageActivity.this);
-                queue.add(mypostRequest);
+                Intent intent = new Intent(MypageActivity.this, MypostActivity.class);
+                intent.putExtra("userID",userID);
+                MypageActivity.this.startActivity(intent);
             }
         });
 
         editInfo_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String userPassword = getIntent().getStringExtra("userPassword");
-                String userEmail = getIntent().getStringExtra("userEmail");
-                String userName = getIntent().getStringExtra("userName");
                 Intent intent = new Intent(MypageActivity.this, EditInfoActivity.class);
                 intent.putExtra("userID",userID);
                 intent.putExtra("userPassword",userPassword);
