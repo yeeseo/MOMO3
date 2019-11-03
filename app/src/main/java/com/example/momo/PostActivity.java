@@ -71,7 +71,7 @@ public class PostActivity extends AppCompatActivity {
                 }
             }
         };
-        String bid = getIntent().getStringExtra("BID");
+        final String bid = getIntent().getStringExtra("BID");
         GetPostSaleRequest getPostSaleRequest = new GetPostSaleRequest(bid, responseListener);
         RequestQueue queue = Volley.newRequestQueue(PostActivity.this);
         queue.add(getPostSaleRequest);
@@ -92,11 +92,12 @@ public class PostActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String userID = id.getText().toString();
                 String replyDate = replydate.getText().toString();
-                String contenttext = content.getText().toString();
+                final String contenttext = content.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.d("@@@@@@@@@ohyeah", contenttext+'\n'+response);
                         try{
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
@@ -110,9 +111,10 @@ public class PostActivity extends AppCompatActivity {
                         }
                     }
                 };
-                //ReplyRequest replyRequest = new ReplyRequest(userID,contenttext,replyDate,responseListener);//댓글번호,게시판번호추가 댓글번호필요한가?
+                Log.d("###########", bid+"/"+userID+'/'+contenttext+'/'+replyDate);
+                ReplyRequest replyRequest = new ReplyRequest(bid, userID,contenttext,replyDate,responseListener);//댓글번호,게시판번호추가 댓글번호필요한가?
                 RequestQueue queue = Volley.newRequestQueue(PostActivity.this);
-                //queue.add(replyRequest);
+                queue.add(replyRequest);
 
             }
         });

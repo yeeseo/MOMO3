@@ -774,10 +774,8 @@ id packed
 id parent
 id parentPanel
 id percent
-id post_buy
 id post_content
 id post_date
-id post_sale
 id post_title
 id progress_circular
 id progress_horizontal
