@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             manage_Btn.setVisibility(View.INVISIBLE);
         }
         mListViewList = findViewById(R.id.main_sale_list);
-
+        mArrayList.clear();
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -184,8 +184,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected  void onResume(){
         super.onResume();
-        mListViewList = findViewById(R.id.main_sale_list);
-
+        mArrayList.clear();
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
