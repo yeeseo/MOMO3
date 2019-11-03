@@ -184,9 +184,59 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected  void onResume(){
         super.onResume();
-        if(mListViewList.getAdapter() != null) {
-            ((BaseAdapter) mListViewList.getAdapter()).notifyDataSetChanged();
-        }
+        mListViewList = findViewById(R.id.main_sale_list);
+
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                AlertDialog.Builder b = new AlertDialog.Builder(MainActivity.this);
+                Log.d("response@@@@@@", response);
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    JSONArray jsonArray = jsonResponse.getJSONArray(TAG_JSON);
+
+                    if (jsonArray.length() > 0) {
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject item = jsonArray.getJSONObject(i);
+                            Log.d("response@@@@@@", item.toString());
+                            String title = item.getString(TAG_TITLE);
+                            String id = item.getString(TAG_ID);
+                            String date = item.getString("start_date") + "~" + item.getString("end_date");
+                            Log.d("~~~~~", title + date);
+                            HashMap<String, String> hashMap = new HashMap<>();
+                            hashMap.put(TAG_ID, id);
+                            hashMap.put(TAG_TITLE, title);
+                            hashMap.put(TAG_TEXT, date);
+
+                            mArrayList.add(hashMap);
+                        }
+                        if (mArrayList.size() > 0) {
+                            Log.d("length---", " > 0");
+                        }
+
+                        ListAdapter adapter = new SimpleAdapter(
+                                MainActivity.this, mArrayList, R.layout.post_list,
+                                new String[]{TAG_ID, TAG_TITLE, TAG_TEXT},
+                                new int[]{R.id.textView_list_id, R.id.textView_list_title, R.id.textView_list_date}
+                        );
+                        ((BaseAdapter) adapter).notifyDataSetChanged();
+                        mListViewList.setAdapter(adapter);
+
+
+
+                    } else {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setMessage("실패!!").setNegativeButton("다시 시도", null).create().show();
+                    }
+                } catch (Exception e) {
+                    Log.d("하아...", "showResult : ", e);
+                }
+            }
+        };
+
+        BoardForSaleRequest boardForSaleRequest = new BoardForSaleRequest(responseListener);
+        RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
+        queue.add(boardForSaleRequest);
     }
     class BackgroundTask extends AsyncTask<Void,Void,String>
     {
