@@ -38,6 +38,7 @@
         <activity android:name=".MypageActivity" />
         <activity android:name=".EditInfoActivity" />
         <activity android:name=".MypostActivity" />
+        <activity android:name=".UploadPostActivity" />
     </application>
 
 </manifest>

@@ -47,6 +47,7 @@
         <activity android:name="com.example.momo.MypageActivity" />
         <activity android:name="com.example.momo.EditInfoActivity" />
         <activity android:name="com.example.momo.MypostActivity" />
+        <activity android:name="com.example.momo.UploadPostActivity" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

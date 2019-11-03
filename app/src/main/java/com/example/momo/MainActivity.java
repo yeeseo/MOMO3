@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_TEXT = "text";
     ArrayList<HashMap<String, String>> mArrayList = new ArrayList<>();
     ListView mListViewList;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                         );
                         ((BaseAdapter) adapter).notifyDataSetChanged();
                         mListViewList.setAdapter(adapter);
+
 
 
                     } else {
@@ -155,7 +158,15 @@ public class MainActivity extends AppCompatActivity {
 ////            }
 ////        });
         //삭제부분===========================================================================
-
+        Button write_post_btn = findViewById(R.id.write_post);
+        write_post_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View view){
+                Intent intent = new Intent(MainActivity.this, UploadPostActivity.class);
+                intent.putExtra("userID", userID);
+                MainActivity.this.startActivity(intent);
+            }
+        });
         Button logout = findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,7 +181,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    protected  void onResume(){
+        super.onResume();
+        if(mListViewList.getAdapter() != null) {
+            ((BaseAdapter) mListViewList.getAdapter()).notifyDataSetChanged();
+        }
+    }
     class BackgroundTask extends AsyncTask<Void,Void,String>
     {
         String target;

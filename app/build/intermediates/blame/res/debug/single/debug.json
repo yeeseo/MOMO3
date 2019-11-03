@@ -784,6 +784,10 @@
         "source": "C:\\Users\\yessir\\.gradle\\caches\\transforms-2\\files-2.1\\7ba58f15a5f3b56d5096951b3cdcf862\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\yessir\\workspace\\MoMo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_uploadpost.xml.flat",
+        "source": "C:\\Users\\yessir\\workspace\\MoMo\\app\\src\\main\\res\\layout\\activity_uploadpost.xml"
+    },
+    {
         "merged": "C:\\Users\\yessir\\workspace\\MoMo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_switch_thumb_material.xml.flat",
         "source": "C:\\Users\\yessir\\.gradle\\caches\\transforms-2\\files-2.1\\7ba58f15a5f3b56d5096951b3cdcf862\\res\\drawable\\abc_switch_thumb_material.xml"
     },

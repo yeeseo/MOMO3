@@ -845,6 +845,11 @@ id top
 id topPanel
 id uniform
 id up
+id up_btn
+id up_content
+id up_enddate
+id up_startdate
+id up_title
 id useLogo
 id userEmail
 id userEmail2
@@ -900,6 +905,7 @@ layout activity_post
 layout activity_register
 layout activity_start
 layout activity_test
+layout activity_uploadpost
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
