@@ -32,8 +32,8 @@ import android.widget.SimpleAdapter;
 public class MypostActivity extends AppCompatActivity {
     private static final String TAG_JSON="webnautes";
     private static final String TAG_TITLE = "title";
-    private static final String TAG_CONTENT = "content";
     private static final String TAG_TEXT = "text";
+    private static final String TAG_ID = "ID";
     ArrayList<HashMap<String, String>> mArrayList = new ArrayList<>();
     ListView mListViewList;
 
@@ -60,15 +60,13 @@ public class MypostActivity extends AppCompatActivity {
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject item = jsonArray.getJSONObject(i);
                                     Log.d("response@@@@@@", item.toString());
-
                                     String title = item.getString(TAG_TITLE);
-                                    String content = item.getString(TAG_CONTENT);
+                                    String id = item.getString(TAG_ID);
                                     String date = item.getString("start_date") + "~" + item.getString("end_date");
-                                    Log.d("~~~~~", title + content + date);
+                                    Log.d("~~~~~", title + date);
                                     HashMap<String, String> hashMap = new HashMap<>();
-
+                                    hashMap.put(TAG_ID, id);
                                     hashMap.put(TAG_TITLE, title);
-                                    hashMap.put(TAG_CONTENT, content);
                                     hashMap.put(TAG_TEXT, date);
 
                                     mArrayList.add(hashMap);
@@ -79,8 +77,8 @@ public class MypostActivity extends AppCompatActivity {
 
                                 ListAdapter adapter = new SimpleAdapter(
                                         MypostActivity.this, mArrayList, R.layout.post_list,
-                                        new String[]{TAG_TITLE, TAG_CONTENT, TAG_TEXT},
-                                        new int[]{R.id.textView_list_id, R.id.textView_list_name, R.id.textView_list_address}
+                                        new String[]{TAG_ID, TAG_TITLE, TAG_TEXT},
+                                        new int[]{R.id.textView_list_id, R.id.textView_list_title, R.id.textView_list_date}
                                 );
                                 ((BaseAdapter) adapter).notifyDataSetChanged();
                                 mListViewList.setAdapter(adapter);

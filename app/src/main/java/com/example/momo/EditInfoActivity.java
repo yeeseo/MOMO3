@@ -25,6 +25,7 @@ public class EditInfoActivity extends AppCompatActivity  {
         final String userEmail = getIntent().getStringExtra("userEmail");
         final String userName = getIntent().getStringExtra("userName");
 
+
         final EditText edit_id_text = findViewById(R.id.edit_id_text);
         final EditText edit_pw2_text = findViewById(R.id.edit_pw2_test);
         final EditText edit_pw_text = findViewById(R.id.edit_pw_test);

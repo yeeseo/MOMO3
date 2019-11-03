@@ -41,6 +41,10 @@
         android:layout_height="48dp"
         android:layout_marginBottom="100dp"
         android:text="로그인"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="@drawable/buttonshape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText6"
         app:layout_constraintStart_toStartOf="@+id/editText6" />

@@ -8,10 +8,11 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="149dp"
+        android:layout_height="113dp"
         android:layout_marginTop="20dp"
         android:text="모모"
+        android:textSize="80sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -27,7 +28,7 @@
         android:layout_marginTop="100dp"
         android:text="모두의 모빌리티"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -38,6 +39,10 @@
         android:layout_marginTop="100dp"
         android:onClick="LoginBtn"
         android:text="로그인"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="@drawable/buttonshape"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -49,6 +54,10 @@
         android:layout_marginTop="20dp"
         android:onClick="Btn"
         android:text="회원가입"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:background="@drawable/buttonshape"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/button" />

@@ -3,6 +3,7 @@ package com.example.momo;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
-
+    public static Activity loginactivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText idText = findViewById(R.id.editText5);
         final EditText passwordText = findViewById(R.id.editText6);
         final Button loginBtn = findViewById(R.id.button4);
+        loginactivity = LoginActivity.this;
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,11 +60,16 @@ public class LoginActivity extends AppCompatActivity {
                                 String userName = jsonResponse.getString("userName");
                                 String userEmail = jsonResponse.getString("userEmail");
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                //Intent intent = new Intent(LoginActivity.this, PostActivity.class);
                                 intent.putExtra("userID",userID);
                                 intent.putExtra("userPassword",userPassword);
                                 intent.putExtra("userName",userName);
                                 intent.putExtra("userEmail",userEmail);
                                 LoginActivity.this.startActivity(intent);
+
+                                Intent replyid = new Intent(LoginActivity.this, PostActivity.class);
+                                replyid.putExtra("userID",userID);
+                                //finish();
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setMessage("로그인 실패!!").setNegativeButton("다시 시도",null).create().show();
