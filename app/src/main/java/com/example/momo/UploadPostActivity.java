@@ -29,7 +29,7 @@ public class UploadPostActivity extends AppCompatActivity {
         final EditText _end_date =  findViewById(R.id.up_enddate);
         final EditText _content =  findViewById(R.id.up_content);
         final String userID = getIntent().getStringExtra("userID");
-
+        final RequestQueue queue = Volley.newRequestQueue(UploadPostActivity.this);
         Button postButton = findViewById(R.id.up_btn);
         postButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -72,6 +72,7 @@ public class UploadPostActivity extends AppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
                             if(success){
                                 Toast.makeText(getApplicationContext(),"등록 성공!!",Toast.LENGTH_SHORT).show();
+                                queue.stop();
                                 finish();
                             }
                             else
@@ -88,7 +89,6 @@ public class UploadPostActivity extends AppCompatActivity {
                     }
                 };
                 UploadPostRequest uploadPostRequest = new UploadPostRequest(userID, title, start_date, end_date,content,responseListener);
-                RequestQueue queue = Volley.newRequestQueue(UploadPostActivity.this);
                 queue.add(uploadPostRequest);
             }
         });

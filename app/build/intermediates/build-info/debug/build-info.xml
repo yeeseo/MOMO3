@@ -5,41 +5,38 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
-    ir-eligibility="CLASS_ADDED"
+    ir-eligibility="FIELD_ADDED"
     plugin-version="3.4.2"
-    timestamp="1572800494978"
+    timestamp="1572843119506"
     token="-5332181977427219444"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="413" />
+        duration="1860" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="82" />
+        duration="283" />
     <task
         name="verifier"
-        duration="16" />
+        duration="30" />
 
-    <artifact
-        location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
     <artifact
         location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1572799366135"
+        timestamp="1572842694431"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -77,12 +74,9 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1572800494978"
+        ir-eligibility="FIELD_ADDED"
+        timestamp="1572843119506"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\yessir\workspace\MoMo\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />

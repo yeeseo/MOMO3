@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             manage_Btn.setVisibility(View.INVISIBLE);
         }
         mListViewList = findViewById(R.id.main_sale_list);
-        mArrayList.clear();
+        mListViewList.setAdapter(null);
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     JSONArray jsonArray = jsonResponse.getJSONArray(TAG_JSON);
-
+                    mArrayList.clear();
                     if (jsonArray.length() > 0) {
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject item = jsonArray.getJSONObject(i);
@@ -184,7 +184,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected  void onResume(){
         super.onResume();
-        mArrayList.clear();
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -194,6 +193,8 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject jsonResponse = new JSONObject(response);
                     JSONArray jsonArray = jsonResponse.getJSONArray(TAG_JSON);
 
+                    mArrayList.clear();
+                    mListViewList.setAdapter(null);
                     if (jsonArray.length() > 0) {
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject item = jsonArray.getJSONObject(i);
