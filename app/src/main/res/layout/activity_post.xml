@@ -67,16 +67,16 @@
             <TextView
                 android:id="@+id/post_content"
                 android:layout_width="300dp"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 android:text="content" />
         </LinearLayout>
 
     </LinearLayout>
 
     <ListView
-        android:id="@+id/ListView"
+        android:id="@+id/reply_list"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="200dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,14 +91,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/replyid"
+            android:id="@+id/reply_id"
             android:layout_width="229dp"
             android:layout_height="wrap_content"
             android:text="ID"
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/replydate"
+            android:id="@+id/reply_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="date"
@@ -118,7 +118,7 @@
         android:paddingBottom="5dp">
 
         <EditText
-            android:id="@+id/content"
+            android:id="@+id/reply_content"
             android:layout_width="321dp"
             android:layout_height="match_parent"
             android:gravity="start|top"

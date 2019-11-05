@@ -92,8 +92,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                     } else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setMessage("실패!!").setNegativeButton("다시 시도", null).create().show();
                     }
                 } catch (Exception e) {
                     Log.d("하아...", "showResult : ", e);
@@ -225,8 +223,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                     } else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setMessage("실패!!").setNegativeButton("다시 시도", null).create().show();
                     }
                 } catch (Exception e) {
                     Log.d("하아...", "showResult : ", e);
