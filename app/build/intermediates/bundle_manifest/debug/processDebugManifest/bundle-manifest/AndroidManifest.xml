@@ -18,6 +18,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity android:name="com.example.momo.PostActivity" />
@@ -47,6 +48,11 @@
         <activity android:name="com.example.momo.EditInfoActivity" />
         <activity android:name="com.example.momo.MypostActivity" />
         <activity android:name="com.example.momo.UploadPostActivity" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.example.momo.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

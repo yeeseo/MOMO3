@@ -1,0 +1,4 @@
+#Wed Nov 06 19:30:22 KST 2019
+base.0=C\:\\Users\\yessir\\workspace\\MoMo\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+path.0=classes.dex
+renamed.0=classes.dex
